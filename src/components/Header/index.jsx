@@ -2,12 +2,10 @@ import React from 'react';
 
 import HeaderLogo from './HeaderLogo';
 import HeaderSearch from './HeaderSearch';
-import HeaderLogin from './HeaderLogin';
-import HeaderCreateAcount from './HeaderCreateAcount';
+import AppButton from '../AppButton';
 
 import './index.css';
 // import Styles from './header.module.css'
-
 
 class Header extends React.Component {
     render() {
@@ -21,8 +19,16 @@ class Header extends React.Component {
                             <HeaderSearch />
                         </div>
                         <div className="col-6 d-flex justify-content-end">
-                            <HeaderLogin />
-                            <HeaderCreateAcount />
+                            <AppButton 
+                                className = "btn-link d-flex align-items-center justtify-content-center"
+                                text = "Log in"
+                                type = "anchor"
+                            />
+                            <AppButton 
+                                className= "btn-primary d-flex align-items-center justtify-content-center"
+                                text = "Create account"
+                                type = "anchor"
+                            />
                         </div>
                     </div>
                 </div>

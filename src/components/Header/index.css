@@ -15,3 +15,13 @@
     color: white;
     border-radius: 0.4rem;
 }
+
+.header .btn.btn-link {
+    color: #3b49df;
+    text-decoration: none;
+}
+
+.header .btn.btn-primary {
+    background-color: #3b49df;
+    color: white;
+}
