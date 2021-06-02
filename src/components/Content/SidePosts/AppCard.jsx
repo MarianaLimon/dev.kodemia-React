@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './appCard.css'
+
 class AppCard extends React.Component {
     constructor(props) {
         super(props);

@@ -3,6 +3,7 @@ import React from 'react';
 import HeaderLogo from './HeaderLogo';
 import HeaderSearch from './HeaderSearch';
 import AppButton from '../AppButton';
+import AppThemeToggle from '../AppThemeToggle'
 
 import './index.css';
 // import Styles from './header.module.css'
@@ -29,6 +30,7 @@ class Header extends React.Component {
                                 text = "Create account"
                                 type = "anchor"
                             />
+                            <AppThemeToggle />
                         </div>
                     </div>
                 </div>

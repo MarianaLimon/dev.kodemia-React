@@ -1,5 +1,6 @@
 import React from 'react';
 
+import AppLoading from './components/AppLoading';
 import Header from './components/Header';
 import Content from './components/Content/SideBarLeft';
 import Posts from './components/Content/SidePosts';
@@ -23,6 +24,9 @@ class App extends React.Component {
                 </div>
             </div>
         </div>
+
+        <AppLoading />
+
       </div>
     )
   }
