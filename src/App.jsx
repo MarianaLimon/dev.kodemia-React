@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import AppLoading from './components/AppLoading';
-import Header from './components/Header';
-import Content from './components/Content/SideBarLeft';
-import Posts from './components/Content/SidePosts';
-import AsideCards from './components/Content/SideBarRight';
+import AppLoading from "./components/AppLoading";
+import Header from "./components/Header";
+import Content from "./components/Content/SideBarLeft";
+import Posts from "./components/Content/SidePosts";
+import AsideCards from "./components/Content/SideBarRight";
+
+import Counter from "./components/Counter";
 
 class App extends React.Component {
   render() {
@@ -12,23 +14,24 @@ class App extends React.Component {
       <div>
         <Header />
         <div className="container">
-            <div className="row">
-                <div className="col-md-2">
-                  <Content />
-                </div>
-                <div className="col-md-6 my-3">
-                  <Posts />
-                </div>
-                <div className="col-md-4 my-3">
-                  <AsideCards />
-                </div>
+          <div className="row">
+            <div className="col-md-2">
+              <Content />
             </div>
+            <div className="col-md-6 my-3">
+              <Posts />
+
+              <Counter />
+            </div>
+            <div className="col-md-4 my-3">
+              <AsideCards />
+            </div>
+          </div>
         </div>
 
         <AppLoading />
-
       </div>
-    )
+    );
   }
 }
 
