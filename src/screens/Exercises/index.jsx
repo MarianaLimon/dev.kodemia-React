@@ -62,7 +62,7 @@ export default function Exercises() {
     <div className="container h-100">
       <div className="row h-100 justify-content-center align-items-center mt-5">
         <div className="col-md-5">
-          <div className="card bg-primary mx-4">
+          <div className="card bg-primary mx-4 mb-4">
             <div className="card-body">
               <h1 className="text-white text-end fw-bold p-4">VISA</h1>
               <h3 className="text-white text-center pb-2">
@@ -84,15 +84,15 @@ export default function Exercises() {
             <div className="p-5">
               <form>
                 <div className="form-group">
-                  <label className="text-white" htmlFor="USDInput">
+                  <label className="text-white" htmlFor=" cardNumberInput">
                     Número de tarjeta
                   </label>
-                  <div className="d-flex">
+                  <div className="d-flex" id="cardNumberInput">
                     <input
                       type="number"
                       className="form-control"
                       id="item1Input"
-                      aria-describedby="nameHelp"
+                      aria-describedby="item1Help"
                       placeholder="****"
                       value={Number(Item1)}
                       onChange={(event) => {
@@ -104,7 +104,7 @@ export default function Exercises() {
                       type="number"
                       className="form-control"
                       id="item2Input"
-                      aria-describedby="nameHelp"
+                      aria-describedby="item2Help"
                       placeholder="****"
                       value={Number(Item2)}
                       onChange={(event) => {
@@ -116,7 +116,7 @@ export default function Exercises() {
                       type="number"
                       className="form-control"
                       id="item3Input"
-                      aria-describedby="nameHelp"
+                      aria-describedby="item3Help"
                       placeholder="****"
                       value={Number(Item3)}
                       onChange={(event) => {
@@ -128,7 +128,7 @@ export default function Exercises() {
                       type="number"
                       className="form-control"
                       id="item4Input"
-                      aria-describedby="nameHelp"
+                      aria-describedby="item4Help"
                       placeholder="****"
                       value={Number(Item4)}
                       onChange={(event) => {
@@ -139,7 +139,7 @@ export default function Exercises() {
                 </div>
 
                 <div className="form-group col-12">
-                  <label className="text-white" htmlFor="USDInput">
+                  <label className="text-white" htmlFor="nameInput">
                     Nombre
                   </label>
                   <input
@@ -156,7 +156,7 @@ export default function Exercises() {
                 </div>
 
                 <div className="form-group col-12">
-                  <label className="text-white" htmlFor="DateInput">
+                  <label className="text-white" htmlFor="dateInput">
                     Date
                   </label>
                   <input
@@ -172,13 +172,13 @@ export default function Exercises() {
                 </div>
 
                 <div className="form-group col-12">
-                  <label className="text-white" htmlFor="USDInput">
+                  <label className="text-white" htmlFor="cvvInput">
                     CVV
                   </label>
                   <input
                     type="number"
                     className="form-control"
-                    id="CVVInput"
+                    id="cvvInput"
                     aria-describedby="cvvHelp"
                     placeholder="Enter CVV"
                     value={Number(CVV)}
