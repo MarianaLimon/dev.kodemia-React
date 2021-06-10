@@ -5,11 +5,11 @@ li{
     padding: 5px 15px;
 }
 
-li:hover{
+li.ulChallenge:hover{
     border-left: solid 5px skyblue;
     border-right: solid 5px skyblue;
 }
 
-ul{
+.ulChallenge{
     width: 6rem;
 }

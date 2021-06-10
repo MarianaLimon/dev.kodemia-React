@@ -9,7 +9,7 @@ export default function Challenge() {
 
   return (
     <div className="container pt-5">
-      <ul>
+      <ul className="ulChallenge">
         {menu.map((item, index) => (
           <li
             className={activeItem === index ? "active" : null}
