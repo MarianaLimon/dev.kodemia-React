@@ -13,7 +13,7 @@ export default function Home() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/character")
+    fetch("https://react-11g-default-rtdb.firebaseio.com/posts.json")
       .then((response) => response.json())
       .then((json) => setData(json));
   }, []);
@@ -29,10 +29,9 @@ export default function Home() {
             <Content />
           </div>
           <div className="col-md-6 my-3">
-            {/* <Posts />
-
-            <Counter /> */}
-            <Posts data={data.results ? data.results : []} />
+            <Posts
+              data={Object.entries(data).length ? Object.entries(data) : []}
+            />
           </div>
           <div className="col-md-4 my-3">
             <AsideCards />

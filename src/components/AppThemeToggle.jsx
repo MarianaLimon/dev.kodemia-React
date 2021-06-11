@@ -72,9 +72,9 @@ import "./appThemeToggle.css";
 function AppThemeToggle() {
   const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    document.body.setAttribute("theme", theme);
-  }, []);
+  // useEffect(() => {
+  //   document.body.setAttribute("theme", theme);
+  // }, []);
 
   useEffect(() => {
     document.body.setAttribute("theme", theme);
