@@ -1,6 +1,8 @@
 // import React from "react";
 import React, { useEffect, useState } from "react";
 
+import { useHistory } from "react-router";
+
 import AppLoading from "../../components/AppLoading";
 import Header from "../../components/Header";
 import Content from "../../components/Content/SideBarLeft";
@@ -12,6 +14,8 @@ import { getPosts } from "../../services";
 
 export default function Home() {
   const [data, setData] = useState({});
+
+  const history = useHistory();
 
   useEffect(() => {
     const request = async () => {
@@ -33,6 +37,14 @@ export default function Home() {
             <Posts
               data={Object.entries(data).length ? Object.entries(data) : []}
             />
+            <div className="col">
+              <button
+                onClick={() => history.push("/createPost")}
+                className="btn btn-primary"
+              >
+                Add Post
+              </button>
+            </div>
           </div>
           <div className="col-md-4 my-3">
             <AsideCards />

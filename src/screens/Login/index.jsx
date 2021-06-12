@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import { useHistory } from "react-router";
 
+import CustomInput from "../../components/CustomInput";
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +27,7 @@ export default function Login() {
             <h2 className="text-white">Log In</h2>
             <form className="mt-5" onSubmit={handleSubmit}>
               <div className="form-group col-12">
-                <label className="text-white" htmlFor="exampleInputEmail1">
+                {/* <label className="text-white" htmlFor="exampleInputEmail1">
                   Email address
                 </label>
                 <input
@@ -36,10 +38,17 @@ export default function Login() {
                   placeholder="Enter email"
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
+                /> */}
+                <CustomInput
+                  id="Email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  callback={setEmail}
                 />
               </div>
               <div className="form-group col-12">
-                <label className="text-white" htmlFor="exampleInputPassword1">
+                {/* <label className="text-white" htmlFor="exampleInputPassword1">
                   Password
                 </label>
                 <input
@@ -49,6 +58,13 @@ export default function Login() {
                   placeholder="Password"
                   value={password}
                   onChange={({ target: { value } }) => setPassword(value)}
+                /> */}
+                <CustomInput
+                  id="Password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  callback={setPassword}
                 />
               </div>
               <button type="submit" className="btn btn-primary mt-2">
