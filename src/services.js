@@ -5,7 +5,24 @@ const API_URL = "https://react-11g-default-rtdb.firebaseio.com/";
 const postURL = `${API_URL}/posts/.json`;
 const postDetailURL = (id) => `${API_URL}/posts/${id}/.json`;
 
-// Requests
+
+
+// Requests login
+const loginURL = `${API_URL}/login/.json`;
+
+export const postUser = async (data) => {
+    const response = await fetch(loginURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/JSON",
+      },
+      body: JSON.stringify(data),
+    });
+    return await response.json();
+  };
+
+
+// Requests Post
 export const getPostDetail = async (id) => {
   try {
     const url = postDetailURL(id);
