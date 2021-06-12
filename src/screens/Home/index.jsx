@@ -7,18 +7,19 @@ import Content from "../../components/Content/SideBarLeft";
 import Posts from "../../components/Content/SidePosts";
 import AsideCards from "../../components/Content/SideBarRight";
 
-// import Counter from "../../components/Counter";
+// Services
+import { getPosts } from "../../services";
 
 export default function Home() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    fetch("https://react-11g-default-rtdb.firebaseio.com/posts.json")
-      .then((response) => response.json())
-      .then((json) => setData(json));
+    const request = async () => {
+      const json = await getPosts();
+      setData(json);
+    };
+    request();
   }, []);
-
-  console.log(data.results);
 
   return (
     <React.Fragment>
